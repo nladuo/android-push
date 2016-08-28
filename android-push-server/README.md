@@ -30,9 +30,15 @@ cd android-push/android-push-server
 ### 6.Start goim server
 ``` shell
 cd android-push/android-push-server
+./start_kafka.sh
 ./start_goim.sh
 ```
 
+### 7.Start goim manager
+``` shell
+go get github.com/gin-gonic/gin
+go run manager.go
+```
 
 ## License
 MIT
