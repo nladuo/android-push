@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+# Install goim
+
 cd $GOPATH/src/goim/router
 go install
 cp router-example.conf $GOPATH/bin/router.conf
@@ -19,3 +22,5 @@ cp job-log.xml $GOPATH/bin/
 
 mkdir $GOPATH/logs
 mkdir $GOPATH/logs/goim
+
+# Install 

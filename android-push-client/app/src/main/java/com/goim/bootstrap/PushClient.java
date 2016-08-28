@@ -6,6 +6,8 @@ import java.util.Date;
 import java.util.Observable;
 import java.util.Observer;
 
+import kalen.app.android_push_client.util.C;
+
 public class PushClient extends AbstractBlockingClient {
 
 	public PushClient(InetAddress server, int port ,Integer uid ,String game) {
@@ -63,7 +65,7 @@ public class PushClient extends AbstractBlockingClient {
 
 	}
 	
-	class Listener implements Observer {
+	public class Listener implements Observer {
 	     @Override
 	     public void update(Observable o, Object arg) {
 	         System.out.println( "PushClient 死机" );
@@ -75,7 +77,7 @@ public class PushClient extends AbstractBlockingClient {
 	}
 	
 	public static void main(String[] args) throws UnknownHostException {
-		PushClient cb = new PushClient(InetAddress.getByName("10.160.61.129"), 8080 , 1, "game");
+		PushClient cb = new PushClient(InetAddress.getByName(C.serverIp), C.serverPort , 1, "game");
 		Listener listen = cb.new Listener();
         cb.addObserver(listen);
 		Thread t = new Thread(cb);
