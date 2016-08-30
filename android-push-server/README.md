@@ -1,6 +1,5 @@
 # android-push-server
 
-
 ## Installation
 ### 1.Install go1.5 and java
 Please check the installation detail on google.
@@ -27,18 +26,7 @@ cd android-push/android-push-server
 ./install_goim.sh
 ```
 
-### 6.Start goim server
-``` shell
-cd android-push/android-push-server
-./start_kafka.sh
-./start_goim.sh
-```
-
-### 7.Start goim manager
+### 6.Install Web Framework Gin
 ``` shell
 go get github.com/gin-gonic/gin
-go run manager.go
 ```
-
-## License
-MIT

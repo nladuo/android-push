@@ -26,18 +26,17 @@ public class PushClient extends AbstractBlockingClient{
 
     @Override
     protected void messageReceived(String message) {
-
-
+        delegate.messageReceived(message);
     }
 
     @Override
     protected void heartBeatReceived() {
-
+        System.out.println("heartBeatReceived ...");
     }
 
     @Override
     protected void authSuccess() {
-
+        System.out.println("authSuccess ...");
     }
 
     @Override
@@ -49,4 +48,6 @@ public class PushClient extends AbstractBlockingClient{
     protected void disconnected() {
 
     }
+
+
 }
