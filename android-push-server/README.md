@@ -14,7 +14,7 @@ export KAFKA_PATH=/path/to/where/kafka_2.11-0.10.0.0
 ### 4.Download goim
 ```shell
 $ cd $GOPATH/src
-$ git clone https://github.com/nladuo/goim.git
+$ git clone https://github.com/Terry-Mao/goim.git
 $ cd $GOPATH/src/goim
 $ go get ./...
 ```
